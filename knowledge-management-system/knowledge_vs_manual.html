@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ナレッジ vs マニュアル - 何が違う?</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #111827;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #10b981;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #1f2937;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #10b981;
+        }
+        
+        h3 {
+            color: #374151;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #4b5563;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            color: white;
+            border: none;
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0.95;
+        }
+        
+        .question-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .question-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        
+        .answer-box {
+            background-color: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .answer-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+        
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .doc-card {
+            background-color: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .doc-card-knowledge {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        
+        .doc-card-manual {
+            border-color: #10b981;
+            background-color: #f0fdf4;
+        }
+        
+        .doc-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .doc-number {
+            background-color: #3b82f6;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .doc-card-manual .doc-number {
+            background-color: #10b981;
+        }
+        
+        .completion-level {
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .example-box {
+            background-color: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .example-knowledge {
+            border-color: #3b82f6;
+        }
+        
+        .example-manual {
+            border-color: #10b981;
+        }
+        
+        .example-header {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .example-knowledge .example-header {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .example-manual .example-header {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        .example-content {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .icon-check {
+            color: #10b981;
+            margin-right: 8px;
+        }
+        
+        .icon-cross {
+            color: #ef4444;
+            margin-right: 8px;
+        }
+        
+        .reason-box {
+            background-color: #fef2f2;
+            border-left: 5px solid #ef4444;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .reason-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+        
+        .solution-box {
+            background-color: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .solution-box h3 {
+            color: #065f46;
+            margin-top: 0;
+        }
+        
+        .ai-example {
+            background-color: #f3f4f6;
+            border: 2px solid #6366f1;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .ai-question {
+            background-color: #eef2ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #3730a3;
+        }
+        
+        .ai-answer {
+            background-color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .decision-box {
+            background-color: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .decision-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>ナレッジ vs マニュアル</h1>
+            <p>何が違う? なぜ両方必要なのか?</p>
+        </div>
+
+        <div class="question-box">
+            <h3>❓ よくある疑問</h3>
+            <ul>
+                <li>「ナレッジでHowToを書いたら、それってもうマニュアルじゃないの?」</li>
+                <li>「最初からマニュアル作ったほうが早くない?」</li>
+            </ul>
+        </div>
+
+        <div class="answer-box">
+            <h3>✅ 答え: 目的と完成度が全く違う</h3>
+            <p>同じfreee勤怠について書いても、ナレッジとマニュアルでは<strong>内容が全く異なります</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>2つの違い - 概要</h2>
+            
+            <div class="comparison-table">
+                <div class="doc-card doc-card-knowledge">
+                    <h3>
+                        <span class="doc-number">①</span>
+                        ナレッジ
+                    </h3>
+                    
+                    <h4>= 調査・試行錯誤の記録</h4>
+                    
+                    <h4>目的:</h4>
+                    <ul>
+                        <li>個人の頭の中の知識を外に出す</li>
+                        <li>次に同じことが起きたときの参考</li>
+                        <li>調査過程・判断理由を残す</li>
+                    </ul>
+                    
+                    <div class="completion-level">
+                        完成度: 60% (書きかけOK)
+                    </div>
+                    
+                    <h4>特徴:</h4>
+                    <ul>
+                        <li>結論が出ていなくてもOK</li>
+                        <li>試したことを列挙するだけでもOK</li>
+                        <li>後から統合・整理される前提</li>
+                        <li>迷ったポイントも記録</li>
+                    </ul>
+                    
+                    <h4>AI活用での役割:</h4>
+                    <ul>
+                        <li>多様な事例・パターンの学習元</li>
+                        <li>エラー対処のバリエーション提供</li>
+                        <li>背景情報・判断理由の学習</li>
+                    </ul>
+                </div>
+                
+                <div class="doc-card doc-card-manual">
+                    <h3>
+                        <span class="doc-number">②</span>
+                        マニュアル
+                    </h3>
+                    
+                    <h4>= 確定した標準手順</h4>
+                    
+                    <h4>目的:</h4>
+                    <ul>
+                        <li>誰がやっても同じ結果を出す</li>
+                        <li>業務の標準化・品質担保</li>
+                        <li>教育・引継ぎの基準</li>
+                    </ul>
+                    
+                    <div class="completion-level">
+                        完成度: 100% (常に最新・正確)
+                    </div>
+                    
+                    <h4>特徴:</h4>
+                    <ul>
+                        <li>手順が確定している</li>
+                        <li>判断基準が明確</li>
+                        <li>定期レビュー・更新が前提</li>
+                        <li>例外処理も含めて網羅</li>
+                    </ul>
+                    
+                    <h4>AI活用での役割:</h4>
+                    <ul>
+                        <li>確実な回答の提供元</li>
+                        <li>標準的な手順の学習</li>
+                        <li>判断フローの学習</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>具体例で理解する: freee勤怠ログインエラー</h2>
+            
+            <div class="example-box example-knowledge">
+                <div class="example-header">
+                    <span class="doc-number">①</span> ナレッジの例
+                </div>
+                
+                <h4>タイトル: freee勤怠エラー調査記録</h4>
+                
+                <div class="example-content">
+【問い合わせ内容】
+12/20 Aさんからログインできないと連絡
+
+【試したこと】
+1. ブラウザ確認 → Chrome使用中
+2. キャッシュクリアを案内 → 解決!
+3. 念のため別ブラウザでも確認
+   → Edgeでは問題なし
+
+【気づいたこと】
+• Chromeで発生しやすい?
+• 過去にも似た事例があった気がする
+• キャッシュクリアで大体解決
+
+【TODO】
+• 他の事例も調査して傾向を確認
+• 頻発するならマニュアル化検討
+                </div>
+                
+                <p><strong>→ 完成度: 60%</strong> / 書きかけOK</p>
+                <p><strong>→ 目的:</strong> 次回同じ問題が起きたときの参考</p>
+            </div>
+            
+            <div class="example-box example-manual">
+                <div class="example-header">
+                    <span class="doc-number">②</span> マニュアルの例
+                </div>
+                
+                <h4>タイトル: freee勤怠ログインエラー対処法</h4>
+                
+                <div class="example-content">
+【症状】
+freee勤怠にログインできない
+エラーメッセージが表示される
+
+【対処手順】
+1. 使用ブラウザを確認
+   推奨: Chrome / Edge
+
+2. ブラウザのキャッシュをクリア
+   Chrome: Ctrl+Shift+Delete
+   → 「キャッシュされた画像とファイル」
+      にチェック → クリア
+
+3. ブラウザを再起動
+
+4. 再度ログインを試行
+
+5. 解決しない場合
+   → 別ブラウザで試行
+   → それでもダメならfreeeサポート連絡
+
+【注意事項】
+• パスワードは消えないので安心
+• 定期的なキャッシュクリア推奨
+                </div>
+                
+                <p><strong>→ 完成度: 100%</strong> / 誰でも同じ対応可能</p>
+                <p><strong>→ 目的:</strong> 標準的な対処法として定着</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>つまり何が違う?</h2>
+            
+            <div class="comparison-table">
+                <div>
+                    <h3>ナレッジ</h3>
+                    <ul>
+                        <li>過程・試行錯誤の記録</li>
+                        <li>「どう調べたか」「何に迷ったか」</li>
+                        <li>まずは記録することが目的</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>マニュアル</h3>
+                    <ul>
+                        <li>確定した標準手順</li>
+                        <li>「どう対処するか」が明確</li>
+                        <li>標準化することが目的</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>なぜ両方必要なのか</h2>
+            
+            <div class="reason-box">
+                <h3><span class="icon-cross">❌</span>全部マニュアルにすると...</h3>
+                <ul>
+                    <li>管理コストが爆発する</li>
+                    <li>更新が追いつかない</li>
+                    <li>暫定的な情報が残せない</li>
+                    <li>運用が破綻する</li>
+                </ul>
+            </div>
+            
+            <div class="solution-box">
+                <h3><span class="icon-check">✅</span>ナレッジ→マニュアルの流れにすると...</h3>
+                <ul>
+                    <li>まず気軽に記録(ナレッジ)</li>
+                    <li>標準化が必要なものだけマニュアル化</li>
+                    <li>管理コストを最小化</li>
+                    <li>AIは両方から学習できる</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>AI活用での効果</h2>
+            
+            <div class="ai-example">
+                <div class="ai-question">
+                    質問: 「freee勤怠にログインできない」
+                </div>
+                
+                <div class="ai-answer">
+                    <p><strong>AIの回答:</strong></p>
+                    <p>「ブラウザのキャッシュクリアをお試しください。詳しい手順はマニュアル『freee勤怠ログインエラー対処』をご覧ください。</p>
+                    <p>過去の事例では、Chrome使用時に発生しやすい傾向があります(ナレッジ『freee勤怠エラー調査記録』より)」</p>
+                </div>
+                
+                <p style="text-align: center; margin-top: 20px;">
+                    <strong>→ マニュアルの確実性 + ナレッジの豊富さ</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>判断基準</h2>
+            
+            <div class="decision-box">
+                <h3>ナレッジにするべき:</h3>
+                <ul>
+                    <li>まだ調査中・検証中</li>
+                    <li>事例が少ない</li>
+                    <li>暫定的な対応</li>
+                    <li>試行錯誤の記録</li>
+                </ul>
+                
+                <h3 style="margin-top: 25px;">マニュアルにするべき:</h3>
+                <ul>
+                    <li>手順が確定している</li>
+                    <li>定常的に発生する</li>
+                    <li>誰がやっても同じ対応が必要</li>
+                    <li>標準化が必要</li>
+                </ul>
+                
+                <h3 style="margin-top: 25px;">迷ったら:</h3>
+                <p style="font-size: 1.2em; text-align: center; margin-top: 15px;">
+                    <span class="highlight">まずナレッジで記録 → 必要になったらマニュアル化</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
