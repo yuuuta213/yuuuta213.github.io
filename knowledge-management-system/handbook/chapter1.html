@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1章: 基本思想と原則 | ハンドブック</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .nav-btn:hover {
+            background: #5568d3;
+        }
+        ul, ol {
+            line-height: 2;
+            margin-left: 20px;
+        }
+        .guide-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .guide-link h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .guide-link a {
+            color: white;
+            text-decoration: underline;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="../guides/index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; 
+            <a href="index.html">ハンドブック</a> &gt; 
+            第1章
+        </div>
+
+        <div class="navigation">
+            <a href="chapter0.html" class="nav-btn">← 前の章</a>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <a href="chapter2.html" class="nav-btn">次の章 →</a>
+        </div>
+
+        <h1>第1章: 基本思想と原則(Purpose / Principles)</h1>
+
+        <div class="guide-link">
+            <h3>💡 関連する導入ガイド</h3>
+            <p>この章の内容は、以下の導入ガイドで分かりやすく説明されています:</p>
+            <p>
+                → <a href="../guides/vision.html">ビジョン説明(10分)</a><br>
+                → <a href="../guides/four-categories.html">文書体系を4つに分ける理由(5分)</a>
+            </p>
+        </div>
+
+        <h2>1-1. 本プロジェクトの背景と課題認識</h2>
+
+        <p>本プロジェクトは、単にドキュメントを増やすことを目的としたものではない。背景にあるのは、以下のような<strong>構造的な課題</strong>である。</p>
+
+        <ul>
+            <li>問い合わせ対応が属人化し、対応内容が個人の中で完結してしまう</li>
+            <li>過去の対応や判断理由が残らず、同じ問い合わせが繰り返される</li>
+            <li>ナレッジやマニュアルが点在し、「どれを見ればよいか」が分からない</li>
+            <li>一度作られた文書が更新されず、実態と乖離していく</li>
+        </ul>
+
+        <p>これらは、個々の担当者の努力不足によるものではない。<strong>仕組みとして、知識が蓄積・共有・更新される前提が存在していなかった</strong>ことが本質的な問題である。</p>
+
+        <p>本プロジェクトでは、この状況を「個人の頑張り」で解決するのではなく、<strong>仕組みとして再現性のある状態を作ること</strong>を目的とする。</p>
+
+        <hr>
+
+        <h2>1-2. ナレッジマネジメントの基本思想</h2>
+
+        <p>本プロジェクトにおけるナレッジマネジメントの基本思想は、次のとおりである。</p>
+
+        <h3>2つの情報資産を管理する</h3>
+
+        <p>本プロジェクトでは、<strong>システムG向け</strong>と<strong>利用者向け</strong>の2つの異なる情報資産を管理する。</p>
+
+        <ul>
+            <li><strong>システムG向け情報資産:</strong> 業務遂行のための内部情報</li>
+            <li><strong>利用者向け情報資産:</strong> サービス利用のための外部案内情報</li>
+        </ul>
+
+        <p>この2つは<strong>対象者が異なるため、内容も作成方法も異なる</strong>。混在させることなく、独立して管理する。</p>
+
+        <h3>ナレッジは「溜めるもの」である</h3>
+
+        <p>ナレッジは、最初から整理されている必要はない。問い合わせ対応や調査の過程で得られた情報を、<strong>一次情報として残すこと</strong>を最優先とする。</p>
+
+        <ul>
+            <li>書きかけでもよい</li>
+            <li>文章が荒くてもよい</li>
+            <li>結論に至るまでの過程が残っていてよい</li>
+        </ul>
+
+        <p>重要なのは、「個人の中だけに留めない」ことである。</p>
+
+        <h3>マニュアルは「厳選するもの」である</h3>
+
+        <p>一方で、マニュアルは無制限に増やすべきものではない。マニュアルは<strong>業務の基準となる文書</strong>であり、以下を前提とする。</p>
+
+        <ul>
+            <li>誰が読んでも同じ結果になる再現性</li>
+            <li>内容が最新であること</li>
+            <li>レビューと更新を前提とした運用</li>
+        </ul>
+
+        <p>これらを満たせないものは、マニュアルとして扱わない。</p>
+
+        <h3>正本の一元化</h3>
+
+        <p>すべての情報において、<strong>正本は1つだけ持つ</strong>ことを原則とする。</p>
+
+        <ul>
+            <li>同じ内容を複数の場所で管理しない</li>
+            <li>正本の所在を明確にする</li>
+            <li>派生文書は正本を参照する</li>
+        </ul>
+
+        <p>この原則により、情報の不整合と更新漏れを防ぐ。</p>
+
+        <hr>
+
+        <h2>1-3. Single Source of Truth(SSoT)</h2>
+
+        <h3>正本を1つにする</h3>
+
+        <p>Single Source of Truth(以下、SSoT)とは、<strong>「その情報について、唯一正しいとみなす情報源を1つに定める」</strong>という考え方である。</p>
+
+        <p>本プロジェクトでは、以下を原則とする。</p>
+
+        <ul>
+            <li>同じ内容を複数の場所に書かない</li>
+            <li>情報は必ず正本に集約する</li>
+            <li>参照が必要な場合は、リンクでつなぐ</li>
+        </ul>
+
+        <h3>SSoTが必要な理由</h3>
+
+        <p>SSoTを定めない運用では、次の問題が必ず発生する。</p>
+
+        <ul>
+            <li>更新漏れによる情報の不整合</li>
+            <li>「どれが最新か分からない」状態</li>
+            <li>責任の所在が不明確になる</li>
+        </ul>
+
+        <p>これを防ぐため、<strong>「どこに正本があるか」を明確にすること自体をルール化</strong>する。</p>
+
+        <h3>本ハンドブックとSSoT</h3>
+
+        <p>本ハンドブックは、以下に関する<strong>最上位のSSoT</strong>である。</p>
+
+        <ul>
+            <li>ナレッジマネジメント全体の考え方</li>
+            <li>文書の分類</li>
+            <li>運用ルール</li>
+        </ul>
+
+        <p>本ハンドブックの記述と他の文書が矛盾する場合は、<strong>本ハンドブックの記述を正とする。</strong></p>
+
+        <hr>
+
+        <h2>1-4. 継続を前提とした設計思想</h2>
+
+        <p>本プロジェクトでは、「完璧さ」よりも<strong>「継続できること」</strong>を重視する。</p>
+
+        <ul>
+            <li>最初から完成形を目指さない</li>
+            <li>使われないルールは作らない</li>
+            <li>管理のための管理をしない</li>
+        </ul>
+
+        <p>ナレッジやマニュアルは、<strong>使われ、更新され続けて初めて価値を持つ</strong>。そのため、本ハンドブックにおいても、以下の思想を貫く。</p>
+
+        <ul>
+            <li>ルールは最小限にする</li>
+            <li>判断基準を明確にする</li>
+            <li>運用が破綻しないことを優先する</li>
+        </ul>
+
+        <div class="navigation" style="margin-top: 50px;">
+            <a href="chapter0.html" class="nav-btn">← 前の章</a>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <a href="chapter2.html" class="nav-btn">次の章 →</a>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>

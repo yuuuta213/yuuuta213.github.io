@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンドブック(辞書) | ナレッジマネジメントシステム</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .search-box {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .chapter-list {
+            list-style: none;
+            padding: 0;
+        }
+        .chapter-item {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .chapter-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .chapter-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .chapter-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .chapter-sections {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #718096;
+        }
+        .chapter-sections li {
+            margin: 5px 0;
+        }
+        .chapter-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .guide-link-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .guide-link-box h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 10px 10px 10px 0;
+        }
+        .btn:hover {
+            background: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="../guides/index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; ハンドブック(辞書)
+        </div>
+
+        <h1>📖 ハンドブック(辞書)</h1>
+
+        <div class="info-box">
+            <h3 style="margin-top: 0;">📌 ハンドブックの位置づけ</h3>
+            <p>このハンドブックは、ナレッジマネジメントシステムの<strong>完全版辞書</strong>です。</p>
+            <p><strong>使い方:</strong></p>
+            <ul>
+                <li>最初から全部読む必要はありません</li>
+                <li>運用中に迷ったときに、該当する章を参照してください</li>
+                <li>判断基準や詳細ルールを確認するための資料です</li>
+            </ul>
+        </div>
+
+        <div class="guide-link-box">
+            <h2>💡 ハンドブックを読む前に</h2>
+            <p>初めての方は、まず<strong>導入ガイド</strong>で全体像を把握することをおすすめします:</p>
+            <a href="../guides/quickstart.html" class="btn">クイックスタート(5分)</a>
+            <a href="../guides/index.html" class="btn">導入ガイド一覧</a>
+        </div>
+
+        <div class="search-box">
+            <h3 style="margin-top: 0;">🔍 検索</h3>
+            <input type="text" id="searchInput" placeholder="キーワードを入力して検索..." onkeyup="searchChapters()">
+            <p style="margin-top: 10px; color: #718096; font-size: 0.9em;">※ページ内で章タイトルを検索できます</p>
+        </div>
+
+        <h2>📚 目次 - 章一覧</h2>
+
+        <ul class="chapter-list" id="chapterList">
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第0章</span>
+                    <a href="chapter0.html" class="chapter-link">はじめに(位置づけと前提)</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>0-1. 本ハンドブックの目的</li>
+                    <li>0-2. 本ハンドブックが対象とする範囲</li>
+                    <li>0-3. 本ハンドブックの位置づけ</li>
+                    <li>0-4. 本ハンドブックの読み方</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第1章</span>
+                    <a href="chapter1.html" class="chapter-link">基本思想と原則(Purpose / Principles)</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>1-1. 本プロジェクトの背景と課題認識</li>
+                    <li>1-2. ナレッジマネジメントの基本思想</li>
+                    <li>1-3. Single Source of Truth(SSoT)</li>
+                    <li>1-4. 継続を前提とした設計思想</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第2章</span>
+                    <a href="chapter2.html" class="chapter-link">文書体系と分類ルール(Document Framework)</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>2-1. 文書の4分類</li>
+                    <li>2-2. 各文書の詳細</li>
+                    <li>2-3. 重要な関係性: ②と③は独立している</li>
+                    <li>2-4. 文書間の関係性</li>
+                    <li>2-5. 正本・参照・派生の定義</li>
+                    <li>2-6. 文書分類に関する基本ルール</li>
+                    <li>2-7. 絶対に守るべき5つのルール</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第3章</span>
+                    <a href="chapter3.html" class="chapter-link">ナレッジ・マニュアル・利用者マニュアルの作成ルール</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>3-1. ナレッジの定義と作成基準</li>
+                    <li>3-2. マニュアルの定義と作成基準</li>
+                    <li>3-3. 利用者マニュアルの定義と作成基準</li>
+                    <li>3-4. 3つの文書の作成ルール</li>
+                    <li>3-5. 文書の使い分けと判断フロー</li>
+                    <li>3-6. 昇格・派生を急がないという判断</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第4章</span>
+                    <a href="chapter4.html" class="chapter-link">業務起点の運用フロー</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>4-1. 文書作成の起点</li>
+                    <li>4-2. 実運用起点(問い合わせ)</li>
+                    <li>4-3. 予測起点(導入・変更)</li>
+                    <li>4-4. 文書作成の判断基準まとめ</li>
+                    <li>4-5. 昇格・派生フローの考え方</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第5章</span>
+                    <a href="chapter5.html" class="chapter-link">ツールの役割分担(Notion / SharePoint)</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>5-1. ツールを使い分ける理由</li>
+                    <li>5-2. Notionの役割</li>
+                    <li>5-3. SharePointの役割</li>
+                    <li>5-4. NotionとSharePointの関係</li>
+                    <li>5-5. 正本管理の原則</li>
+                    <li>5-6. ツール選択の判断基準</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第6章</span>
+                    <a href="chapter6.html" class="chapter-link">運用・レビュー・改善サイクル</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>6-1. 運用における基本的な考え方</li>
+                    <li>6-2. レビューと更新の考え方</li>
+                    <li>6-3. 更新ルール</li>
+                    <li>6-4. KPIと可視化</li>
+                    <li>6-5. 棚卸しと整理</li>
+                    <li>6-6. 改善サイクルの回し方</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">第7章</span>
+                    <a href="chapter7.html" class="chapter-link">利用者マニュアル・利用者向け資料と将来展開</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>7-1. 本章の位置づけ</li>
+                    <li>7-2. 利用者マニュアルの詳細ルール</li>
+                    <li>7-3. 利用者向け資料の詳細ルール</li>
+                    <li>7-4. 全社展開フェーズの考え方(参考)</li>
+                </ul>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-title">
+                    <span class="chapter-number">付録</span>
+                    <a href="appendix.html" class="chapter-link">用語集</a>
+                </div>
+                <ul class="chapter-sections">
+                    <li>用語のアルファベット順リスト</li>
+                    <li>各用語の定義と関連章へのリンク</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+
+    <script>
+        function searchChapters() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const chapterList = document.getElementById('chapterList');
+            const chapters = chapterList.getElementsByClassName('chapter-item');
+
+            for (let i = 0; i < chapters.length; i++) {
+                const title = chapters[i].getElementsByClassName('chapter-title')[0];
+                const sections = chapters[i].getElementsByClassName('chapter-sections')[0];
+                const titleText = title.textContent || title.innerText;
+                const sectionsText = sections.textContent || sections.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    sectionsText.toLowerCase().indexOf(filter) > -1) {
+                    chapters[i].style.display = "";
+                } else {
+                    chapters[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

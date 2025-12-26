@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第0章: はじめに | ハンドブック</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .nav-btn:hover {
+            background: #5568d3;
+        }
+        .nav-btn.disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+        }
+        ul, ol {
+            line-height: 2;
+            margin-left: 20px;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .guide-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .guide-link h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .guide-link a {
+            color: white;
+            text-decoration: underline;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="../guides/index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; 
+            <a href="index.html">ハンドブック</a> &gt; 
+            第0章
+        </div>
+
+        <div class="navigation">
+            <span class="nav-btn disabled">← 前の章</span>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <a href="chapter1.html" class="nav-btn">次の章 →</a>
+        </div>
+
+        <h1>第0章: はじめに(位置づけと前提)</h1>
+
+        <div class="guide-link">
+            <h3>💡 関連する導入ガイド</h3>
+            <p>この章を読む前に、以下の導入ガイドで全体像を把握することをおすすめします:</p>
+            <p>
+                → <a href="../guides/quickstart.html">クイックスタート(5分)</a><br>
+                → <a href="../guides/vision.html">ビジョン説明(10分)</a>
+            </p>
+        </div>
+
+        <h2>0-1. 本ハンドブックの目的</h2>
+
+        <p>本ハンドブックは、<strong>ナレッジマネジメントシステムを正しく、継続的に運用するための基本方針・判断基準・ルールを定義すること</strong>を目的とする。</p>
+
+        <p>本プロジェクトでは、これまで以下のような課題を抱えてきた。</p>
+
+        <ul>
+            <li>問い合わせ対応が個人に依存し、記録が残らない</li>
+            <li>ナレッジやマニュアルが点在し、どれが正しいのか分からない</li>
+            <li>作成された文書が更新されず、形骸化していく</li>
+        </ul>
+
+        <p>これらの課題に対し、本ハンドブックは<strong>「どう書くか」ではなく、「どう考え、どう運用するか」</strong>を定める上位文書として機能する。</p>
+
+        <p>業務やツールが変わっても揺らがない<strong>共通の前提とルール</strong>を明文化し、ナレッジ・マニュアルが<strong>作られ、使われ、更新され続ける状態</strong>を実現することが、本ハンドブックの役割である。</p>
+
+        <hr>
+
+        <h2>0-2. 本ハンドブックが対象とする範囲</h2>
+
+        <p>本ハンドブックが対象とする範囲は、以下のとおりである。</p>
+
+        <h3>対象組織</h3>
+        <ul>
+            <li>システムG内で運用されるナレッジマネジメント活動</li>
+        </ul>
+
+        <h3>対象フェーズ</h3>
+        <ul>
+            <li><strong>初期フェーズ</strong>
+                <ul>
+                    <li>問い合わせ管理の集約</li>
+                    <li>ナレッジ蓄積の定着</li>
+                    <li>マニュアルの正本化と最低限の運用確立</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>対象外</h3>
+        <ul>
+            <li>全社展開を前提とした高度な統制設計</li>
+            <li>個別業務の詳細手順書(操作マニュアル)</li>
+            <li>ツール固有の細かな操作方法</li>
+        </ul>
+
+        <p>本ハンドブックは、<strong>「まずシステムG内で確実に回る状態を作る」ことを最優先</strong>とし、将来的な拡張や全社展開については、別章にて参考情報として扱う。</p>
+
+        <hr>
+
+        <h2>0-3. 本ハンドブックの位置づけ</h2>
+
+        <p>本ハンドブックは、以下の点において<strong>一般的なマニュアルとは明確に異なる</strong>。</p>
+
+        <ul>
+            <li>操作手順を説明する文書ではない</li>
+            <li>個別事例を網羅する資料ではない</li>
+        </ul>
+
+        <p>本ハンドブックの位置づけは、<strong>ナレッジマネジメントシステム全体の「憲法」</strong>である。</p>
+
+        <ul>
+            <li>何をナレッジとして残すのか</li>
+            <li>何をマニュアル化するのか</li>
+            <li>どこに正本を置くのか</li>
+            <li>何をしてはいけないのか</li>
+        </ul>
+
+        <p>といった<strong>判断に迷った際の基準</strong>を提供する。</p>
+
+        <p>具体的なマニュアルやナレッジは、本ハンドブックで定めたルールに従って作成・運用されるものであり、本ハンドブック自体が<strong>最上位の正本(Single Source of Truth: SSoT)</strong>となる。</p>
+
+        <hr>
+
+        <h2>0-4. 本ハンドブックの読み方</h2>
+
+        <p>本ハンドブックは、以下の読み方を前提としている。</p>
+
+        <ul>
+            <li>初めて関わる場合は<strong>第0章から順に読む</strong></li>
+            <li>運用中に迷った場合は<strong>該当章を参照する</strong></li>
+            <li>判断に迷った場合は<strong>本ハンドブックの記述を優先する</strong></li>
+        </ul>
+
+        <p>また、本ハンドブックに記載されていない事項については、以下の運用を前提とする。</p>
+
+        <ul>
+            <li>原則として<strong>新たなルールを独自に作らない</strong></li>
+            <li>必要に応じて、本ハンドブック自体を改訂する</li>
+        </ul>
+
+        <h3>読み方の3パターン</h3>
+
+        <p>本ハンドブックは、読者の状況に応じて3つの読み方ができる。</p>
+
+        <h3>パターン1: 今日から使い始めたい(5分)</h3>
+        <p>→ <strong><a href="../guides/quickstart.html">クイックスタートガイドのみ読む</a></strong></p>
+        <p>このガイドだけで、最低限必要な知識が得られる。</p>
+
+        <h3>パターン2: 基本を理解したい(30-40分)</h3>
+        <p>→ <strong>第0章〜第2章を通読する</strong></p>
+        <p>ナレッジマネジメントの思想と文書体系を理解できる。</p>
+
+        <h3>パターン3: 運用中に迷った(随時)</h3>
+        <p>→ <strong>該当章を参照する、または判断フローチャートを確認する</strong></p>
+        <p>具体的な判断基準や運用ルールを確認できる。</p>
+
+        <h3>判断に迷ったときの確認順序</h3>
+
+        <p>運用中に判断に迷った場合は、以下の順序で確認する。</p>
+
+        <ol>
+            <li><strong><a href="../guides/quickstart.html">クイックスタートガイドの「よくある質問」</a></strong></li>
+            <li><strong>本章に掲載されている判断フローチャート</strong></li>
+            <li><strong>該当する章の詳細記述</strong></li>
+            <li><strong>それでも迷ったら → チーム内で相談</strong></li>
+        </ol>
+
+        <p>判断フローチャートは、本ハンドブックの各章に配置されている。</p>
+
+        <div class="navigation" style="margin-top: 50px;">
+            <span class="nav-btn disabled">← 前の章</span>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <a href="chapter1.html" class="nav-btn">次の章 →</a>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>

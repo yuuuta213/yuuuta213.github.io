@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>付録: 用語集 | ハンドブック</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .nav-btn:hover {
+            background: #5568d3;
+        }
+        .nav-btn.disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+        }
+        .term-item {
+            background: #f7fafc;
+            border-left: 3px solid #667eea;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .term-name {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .term-def {
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="../guides/index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; 
+            <a href="index.html">ハンドブック</a> &gt; 
+            付録
+        </div>
+
+        <div class="navigation">
+            <a href="chapter7.html" class="nav-btn">← 前の章</a>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <span class="nav-btn disabled">次の章 →</span>
+        </div>
+
+        <h1>付録: 用語集</h1>
+
+        <h2>あ行</h2>
+
+        <div class="term-item">
+            <div class="term-name">アーカイブ</div>
+            <div class="term-def">廃止されたマニュアルやナレッジを参考情報として保持する状態。削除ではなく、過去の経緯として残す。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">一次情報</div>
+            <div class="term-def">問い合わせ対応や調査の過程で得られた、整理されていない生の情報。ナレッジとして記録する対象。</div>
+        </div>
+
+        <h2>か行</h2>
+
+        <div class="term-item">
+            <div class="term-name">管理者ナレッジ</div>
+            <div class="term-def">①ナレッジの正式名称。システムG向けの一次情報蓄積場所。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">管理者マニュアル</div>
+            <div class="term-def">②マニュアルの正式名称。システムG向けの業務標準手順。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">クイックガイド</div>
+            <div class="term-def">④利用者向け資料の一種。③利用者マニュアルの要点を1-2ページに簡潔にまとめたもの。</div>
+        </div>
+
+        <h2>さ行</h2>
+
+        <div class="term-item">
+            <div class="term-name">正本(Single Source of Truth / SSoT)</div>
+            <div class="term-def">その情報について、唯一正しいとみなす情報源。本プロジェクトでは全ての文書の正本をNotionで管理する。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">昇格</div>
+            <div class="term-def">①ナレッジから②マニュアルへなど、内容の成熟に伴って文書種別を変更すること。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">スライド版</div>
+            <div class="term-def">④利用者向け資料の一種。③利用者マニュアルを元に作成する研修・発表用のPowerPoint資料。</div>
+        </div>
+
+        <h2>た行</h2>
+
+        <div class="term-item">
+            <div class="term-name">段階的詳細化</div>
+            <div class="term-def">最初から完璧を目指さず、段階的に詳細化していく考え方。問い合わせ→ナレッジ→マニュアルの流れ。</div>
+        </div>
+
+        <h2>な行</h2>
+
+        <div class="term-item">
+            <div class="term-name">ナレッジ</div>
+            <div class="term-def">①管理者ナレッジの略称。調査・試行錯誤の記録を残す一次情報の蓄積場所。完成度60%でOK。</div>
+        </div>
+
+        <h2>は行</h2>
+
+        <div class="term-item">
+            <div class="term-name">派生文書</div>
+            <div class="term-def">正本を元に、対象者や目的に応じて再構成・再表現した文書。④利用者向け資料が代表例。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">ハンドブック</div>
+            <div class="term-def">ナレッジマネジメントシステム全体の「憲法」。判断基準やルールを定める最上位の正本。</div>
+        </div>
+
+        <h2>ま行</h2>
+
+        <div class="term-item">
+            <div class="term-name">マニュアル</div>
+            <div class="term-def">②管理者マニュアルの略称。確定した標準手順を記載する文書。完成度100%が必須。</div>
+        </div>
+
+        <h2>や行</h2>
+
+        <div class="term-item">
+            <div class="term-name">利用者マニュアル</div>
+            <div class="term-def">③利用者マニュアル。全社員向けのサービス利用案内。これがAIチャットボットの学習元になる正本。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">利用者向け資料</div>
+            <div class="term-def">④利用者向け資料。③を元に作成する配布用資料(PowerPoint/PDF等)。正本ではない。</div>
+        </div>
+
+        <h2>A-Z</h2>
+
+        <div class="term-item">
+            <div class="term-name">AI / AIチャットボット</div>
+            <div class="term-def">本プロジェクトの最終ゴール。整備されたマニュアル(①②③)を学習し、24時間自動案内を実現する。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">Notion</div>
+            <div class="term-def">文書の正本を管理するツール。すべての正本(①②③、問い合わせ)をここで管理する。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">SharePoint</div>
+            <div class="term-def">派生文書や配布用資料の保管場所。④利用者向け資料をここで管理する。正本は置かない。</div>
+        </div>
+
+        <div class="term-item">
+            <div class="term-name">SSoT (Single Source of Truth)</div>
+            <div class="term-def">正本。その情報について、唯一正しいとみなす情報源を1つに定める考え方。</div>
+        </div>
+
+        <div class="navigation" style="margin-top: 50px;">
+            <a href="chapter7.html" class="nav-btn">← 前の章</a>
+            <a href="index.html" class="nav-btn">目次へ</a>
+            <span class="nav-btn disabled">次の章 →</span>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>
