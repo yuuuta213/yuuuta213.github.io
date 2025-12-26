@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問(FAQ) | ナレッジマネジメントシステム</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .faq-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            transition: box-shadow 0.3s;
+        }
+        .faq-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .question {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .answer {
+            color: #2d3748;
+            line-height: 1.8;
+        }
+        .answer ul {
+            line-height: 2;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .highlight {
+            background: #fef5e7;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .link-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="../handbook/index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; <a href="index.html">導入ガイド</a> &gt; よくある質問
+        </div>
+
+        <h1>❓ よくある質問(FAQ)</h1>
+
+        <div class="faq-card">
+            <div class="question">Q1: ハンドブックが長すぎて読めません</div>
+            <div class="answer">
+                <p><strong>A:</strong> ハンドブックは<span class="highlight">辞書</span>として使ってください。</p>
+                <p>最初から全部読む必要はありません。</p>
+                <p><strong>おすすめの使い方:</strong></p>
+                <ul>
+                    <li>初めての方: まず<strong>クイックスタート(5分)</strong>だけ読む</li>
+                    <li>もっと知りたい: <strong>導入ガイド(25分)</strong>を順番に読む</li>
+                    <li>運用中に迷ったら: ハンドブックの<strong>該当章だけ</strong>参照</li>
+                </ul>
+                <div class="link-box">
+                    💡 <a href="quickstart.html" style="color: #2c7a7b;">まず5分で始める → クイックスタート</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q2: なぜ文書を4つに分けるのですか? 1つにまとめた方が楽では?</div>
+            <div class="answer">
+                <p><strong>A:</strong> <span class="highlight">AIチャットボット実現のため</span>です。</p>
+                <p><strong>理由:</strong></p>
+                <ol>
+                    <li><strong>AIが学習できる形式にするため</strong>
+                        <ul>
+                            <li>テキスト形式(①②③)でAI学習を可能に</li>
+                            <li>人間用の図解資料(④)も提供</li>
+                        </ul>
+                    </li>
+                    <li><strong>段階的にAIを導入するため</strong>
+                        <ul>
+                            <li>フェーズ2: システムG内でテスト(①②)</li>
+                            <li>フェーズ4: 全社展開(③)</li>
+                        </ul>
+                    </li>
+                    <li><strong>対象者別に適切な情報を提供するため</strong>
+                        <ul>
+                            <li>システムG向け(①②) と 利用者向け(③④)</li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="link-box">
+                    💡 詳しくは → <a href="four-categories.html" style="color: #2c7a7b;">文書体系を4つに分ける理由(5分)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q3: ナレッジとマニュアルの違いが分かりません</div>
+            <div class="answer">
+                <p><strong>A:</strong> 目的と完成度が全く違います。</p>
+                <p><strong>①ナレッジ:</strong></p>
+                <ul>
+                    <li>調査・試行錯誤の<strong>記録</strong>(60%でOK)</li>
+                    <li>個人の頭の中の知識を外に出す</li>
+                    <li>書きかけでもOK</li>
+                </ul>
+                <p><strong>②マニュアル:</strong></p>
+                <ul>
+                    <li>確定した<strong>標準手順</strong>(100%必須)</li>
+                    <li>誰がやっても同じ結果を出す</li>
+                    <li>常に最新・正確</li>
+                </ul>
+                <p><strong>迷ったら → まずナレッジ</strong></p>
+                <div class="link-box">
+                    💡 詳しくは → <a href="knowledge-vs-manual.html" style="color: #2c7a7b;">ナレッジとマニュアルの違い(5分)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q4: 利用者マニュアルと利用者向け資料の違いは?</div>
+            <div class="answer">
+                <p><strong>A:</strong> ③利用者マニュアルが<span class="highlight">正本</span>、④利用者向け資料が<span class="highlight">派生</span>です。</p>
+                <p><strong>③利用者マニュアル(Notion):</strong></p>
+                <ul>
+                    <li><strong>正本</strong> - これが情報の大元</li>
+                    <li>テキスト形式で詳細に記載</li>
+                    <li>AIチャットボットの学習元</li>
+                    <li>全社員が参照できる</li>
+                </ul>
+                <p><strong>④利用者向け資料(SharePoint):</strong></p>
+                <ul>
+                    <li><strong>派生文書</strong> - ③を元に作成</li>
+                    <li>図解・デザイン重視</li>
+                    <li>クイックガイド、スライド版、ポスター等</li>
+                    <li>周知活動・研修で使用</li>
+                </ul>
+                <p><strong>なぜ両方必要?</strong></p>
+                <p>③だけだとNotionでしか作れず、見やすいスライドや図解資料が作れません。<br>
+                一方、④だけだと正本が曖昧になり、AIも学習できません。</p>
+                <p><strong>2段構え</strong>で、AIも人間も両方に対応しています。</p>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q5: なぜ文章中心で作るのですか? 図解の方が分かりやすいのでは?</div>
+            <div class="answer">
+                <p><strong>A:</strong> <span class="highlight">AIが学習できる</span>ようにするためです。</p>
+                <p><strong>AIの特性:</strong></p>
+                <ul>
+                    <li>テキスト形式は学習できる ✅</li>
+                    <li>画像に埋め込まれた文字は学習しにくい ❌</li>
+                </ul>
+                <p><strong>だから2段構えの設計:</strong></p>
+                <ol>
+                    <li><strong>③利用者マニュアル(Notion):</strong> テキスト中心でAI学習用</li>
+                    <li><strong>④利用者向け資料(PowerPoint):</strong> 図解中心で人間用</li>
+                </ol>
+                <p>両方を作ることで、<strong>AIにも人間にも対応</strong>しています。</p>
+                <div class="link-box">
+                    💡 詳しくは → <a href="vision.html" style="color: #2c7a7b;">ビジョン説明(10分)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q6: いつAIチャットボットができるのですか?</div>
+            <div class="answer">
+                <p><strong>A:</strong> 段階的に実現していきます。</p>
+                <p><strong>ロードマップ:</strong></p>
+                <ol>
+                    <li><strong>フェーズ1(今):</strong> Notionで基盤整備
+                        <ul>
+                            <li>ナレッジ・マニュアルを蓄積</li>
+                            <li>テキスト形式の情報資産を構築</li>
+                        </ul>
+                    </li>
+                    <li><strong>フェーズ2:</strong> システムG向けAIテスト
+                        <ul>
+                            <li>システムG内でチャットボット試験運用</li>
+                            <li>①②を学習させて検索コスト削減</li>
+                        </ul>
+                    </li>
+                    <li><strong>フェーズ3:</strong> 全社公開準備
+                        <ul>
+                            <li>③利用者マニュアルを全社員に公開</li>
+                        </ul>
+                    </li>
+                    <li><strong>フェーズ4:</strong> 全社AI展開
+                        <ul>
+                            <li>全社員向けチャットボット稼働</li>
+                            <li>24時間自動案内を実現</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>今やっていることが、すべての基盤です。</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q7: 今すぐ問い合わせを減らしたいのですが...</div>
+            <div class="answer">
+                <p><strong>A:</strong> 段階的に効果が出ます。</p>
+                <p><strong>短期的効果(フェーズ1・今):</strong></p>
+                <ul>
+                    <li>問い合わせを記録 → 繰り返しを把握</li>
+                    <li>ナレッジ蓄積 → 次回の対応が早くなる</li>
+                    <li>マニュアル整備 → 対応品質が安定</li>
+                </ul>
+                <p><strong>中期的効果(フェーズ2):</strong></p>
+                <ul>
+                    <li>システムG内でAI活用 → 検索コスト削減</li>
+                </ul>
+                <p><strong>長期的効果(フェーズ3-4):</strong></p>
+                <ul>
+                    <li>利用者マニュアル公開 → 利用者が自己解決</li>
+                    <li>AIチャットボット稼働 → 問い合わせ大幅削減</li>
+                </ul>
+                <p><strong>今の基盤づくりが、将来の大きな効果につながります。</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <div class="question">Q8: 今の作業は本当に必要ですか? 面倒に感じます...</div>
+            <div class="answer">
+                <p><strong>A:</strong> この作業が<span class="highlight">すべての基盤</span>です。</p>
+                <p><strong>今やっていること:</strong></p>
+                <ul>
+                    <li>問い合わせをNotionに記録</li>
+                    <li>ナレッジを蓄積(書きかけOK)</li>
+                    <li>マニュアルを整備(厳選して)</li>
+                    <li>利用者マニュアルを作成(テキスト中心)</li>
+                </ul>
+                <p><strong>これがあるから実現できること:</strong></p>
+                <ol>
+                    <li><strong>AIが学習できる情報資産</strong>
+                        <ul>
+                            <li>テキスト形式で整理された知識</li>
+                        </ul>
+                    </li>
+                    <li><strong>段階的なAI導入</strong>
+                        <ul>
+                            <li>まずシステムG内でテスト</li>
+                            <li>成功したら全社展開</li>
+                        </ul>
+                    </li>
+                    <li><strong>問い合わせゼロの未来</strong>
+                        <ul>
+                            <li>24時間自動案内</li>
+                            <li>自己解決型組織</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>今が大変でも、この基盤があれば将来が大きく変わります。</strong></p>
+                <div class="link-box">
+                    💡 詳しくは → <a href="vision.html" style="color: #2c7a7b;">ビジョン説明(10分)</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; margin-top: 50px;">
+            <h2 style="color: white; margin-top: 0;">🎯 まだ疑問がある場合</h2>
+            <p>より詳しく知りたい方は:</p>
+            <a href="index.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">導入ガイド一覧</a>
+            <a href="../handbook/index.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">ハンドブック(辞書)</a>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>

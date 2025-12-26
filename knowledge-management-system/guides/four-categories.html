@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文書体系を4つに分ける理由 | ナレッジマネジメントシステム</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 30px;
+        }
+        .goal-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .goal-box h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .condition-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .doc-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .doc-card h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .phase-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .phase-2 {
+            background: #e6fffa;
+            color: #234e52;
+        }
+        .phase-4 {
+            background: #fef5e7;
+            color: #744210;
+        }
+        .ng-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .ok-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        ul {
+            line-height: 2;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .highlight {
+            background: #fef5e7;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="../handbook/index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; <a href="index.html">導入ガイド</a> &gt; 文書体系を4つに分ける理由
+        </div>
+
+        <h1>📊 文書体系を4つに分ける理由(5分)</h1>
+
+        <div class="goal-box">
+            <h2>🎯 前提: 最終ゴール = AIチャットボットの実現</h2>
+            <p style="font-size: 1.1em;">
+                なぜ文書を4種類に分けるのか?<br>
+                それは、<strong>AIチャットボット実現から逆算</strong>して設計されているからです。
+            </p>
+        </div>
+
+        <h2>🤖 AIチャットボットに必要な条件</h2>
+
+        <div class="condition-box">
+            <h3 style="margin-top: 0;">AIが正確に答えるために必要なこと</h3>
+            <ol>
+                <li><strong>テキスト形式</strong>のマニュアル(画像ではなく)</li>
+                <li><strong>統一されたフォーマット</strong>(バラバラではなく)</li>
+                <li><strong>対象者別の整理</strong>(混在していない)</li>
+                <li><strong>段階的な展開が可能</strong>な設計(いきなり全社ではなく)</li>
+            </ol>
+        </div>
+
+        <p>この条件を満たすために、<span class="highlight">文書を4種類に分けて</span>管理しています。</p>
+
+        <h2>📋 4つの文書の役割</h2>
+
+        <h3 style="color: #2d3748; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">システムG向け(内部知識)</h3>
+
+        <div class="doc-card">
+            <h3>① ナレッジ <span class="phase-badge phase-2">フェーズ2で活用</span></h3>
+            <p><strong>何?</strong> 調査・対応の記録</p>
+            <p><strong>形式:</strong> テキスト形式で蓄積</p>
+            <p><strong>AI活用:</strong></p>
+            <ul>
+                <li>フェーズ2で<strong>システムG向けチャットボット</strong>の学習元</li>
+                <li>多様な事例・パターンをAIに学習させる</li>
+                <li>トラブル対処のバリエーションを提供</li>
+            </ul>
+            <p><strong>例:</strong></p>
+            <ul>
+                <li>「freeeログインエラー → ブラウザキャッシュクリアで解決」</li>
+                <li>「プロキシ設定 → 3通りの対処法を試した記録」</li>
+            </ul>
+        </div>
+
+        <div class="doc-card">
+            <h3>② マニュアル <span class="phase-badge phase-2">フェーズ2で活用</span></h3>
+            <p><strong>何?</strong> 確定した標準手順</p>
+            <p><strong>形式:</strong> テキスト形式で管理</p>
+            <p><strong>AI活用:</strong></p>
+            <ul>
+                <li>フェーズ2で<strong>システムG向けチャットボット</strong>の学習元</li>
+                <li>確実な回答の提供元</li>
+                <li>標準的な手順をAIに学習させる</li>
+            </ul>
+            <p><strong>例:</strong></p>
+            <ul>
+                <li>「新入社員アカウント作成手順(7ステップ)」</li>
+                <li>「PC故障時の対応フロー(判断基準あり)」</li>
+            </ul>
+        </div>
+
+        <h3 style="color: #2d3748; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 50px;">利用者向け(公開情報)</h3>
+
+        <div class="doc-card">
+            <h3>③ 利用者マニュアル <span class="phase-badge phase-4">フェーズ4で活用</span></h3>
+            <p><strong>何?</strong> サービス利用案内</p>
+            <p><strong>形式:</strong> テキスト形式で作成</p>
+            <p><strong>AI活用:</strong></p>
+            <ul>
+                <li>フェーズ3で<strong>全社公開</strong></li>
+                <li>フェーズ4で<strong>全社向けチャットボット</strong>の学習元</li>
+                <li>24時間自動案内を実現</li>
+            </ul>
+            <p><strong>例:</strong></p>
+            <ul>
+                <li>「freee勤怠の使い方(詳細版)」</li>
+                <li>「Proxy通信許可申請の手順」</li>
+            </ul>
+        </div>
+
+        <div class="doc-card">
+            <h3>④ 利用者向け資料</h3>
+            <p><strong>何?</strong> ③を元にした図解資料</p>
+            <p><strong>形式:</strong> PowerPoint / PDF / CANVA</p>
+            <p><strong>使い道:</strong></p>
+            <ul>
+                <li>見やすさ・分かりやすさ重視</li>
+                <li>周知活動・研修で使用</li>
+                <li>人間が見るための補助資料</li>
+            </ul>
+            <p><strong>重要:</strong> これは<span class="highlight">正本ではない</span>(配布物)</p>
+            <p><strong>例:</strong></p>
+            <ul>
+                <li>クイックガイド(1ページ)</li>
+                <li>スライド版(研修用)</li>
+                <li>ポスター(掲示用)</li>
+            </ul>
+        </div>
+
+        <h2>❌ なぜこの設計が必要か</h2>
+
+        <h3>NG例1: 全部PowerPointで作ると...</h3>
+
+        <div class="ng-box">
+            <p><strong>問題点:</strong></p>
+            <ul>
+                <li>AIが学習できない(文字が画像に埋め込まれている)</li>
+                <li>検索性が低い</li>
+                <li>更新が大変</li>
+                <li>チャットボットが実現できない</li>
+            </ul>
+        </div>
+
+        <h3>NG例2: 全部1つのデータベースにすると...</h3>
+
+        <div class="ng-box">
+            <p><strong>問題点:</strong></p>
+            <ul>
+                <li>システムG向けと利用者向けが混在</li>
+                <li>段階的なAI導入ができない</li>
+                <li>権限管理が複雑</li>
+                <li>フェーズ2(テスト)ができない</li>
+            </ul>
+        </div>
+
+        <h3>✅ この設計のメリット</h3>
+
+        <div class="ok-box">
+            <p><strong>メリット:</strong></p>
+            <ol>
+                <li><strong>AI学習用(①②③)と人間用(④)を両立</strong>
+                    <ul>
+                        <li>①②③: テキスト形式でAIが学習できる</li>
+                        <li>④: 図解・デザインで人間が理解しやすい</li>
+                    </ul>
+                </li>
+                <li><strong>対象者別に適切な情報を提供</strong>
+                    <ul>
+                        <li>システムG向け(①②): 詳細な手順・判断基準</li>
+                        <li>利用者向け(③④): 分かりやすい操作案内</li>
+                    </ul>
+                </li>
+                <li><strong>段階的なAI導入が可能</strong>
+                    <ul>
+                        <li>フェーズ2: システムG内でテスト</li>
+                        <li>フェーズ4: 全社展開</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h2>🔄 実現イメージ</h2>
+
+        <div style="background: #f7fafc; padding: 30px; border-radius: 8px; margin: 30px 0;">
+            <h3 style="margin-top: 0;">フェーズ2: システムG向けAIボット</h3>
+            <p><strong>学習元:</strong> ①ナレッジ + ②マニュアル</p>
+            <p><strong>利用者:</strong> システムGメンバーのみ</p>
+            <p><strong>効果:</strong></p>
+            <ul>
+                <li>「PCキッティング手順は?」→ AIが即座に回答</li>
+                <li>「freeeエラー対処法は?」→ 過去の対処事例を提示</li>
+                <li>検索コスト削減、ナレッジ活用促進</li>
+            </ul>
+        </div>
+
+        <div style="background: #f7fafc; padding: 30px; border-radius: 8px; margin: 30px 0;">
+            <h3 style="margin-top: 0;">フェーズ4: 全社向けAIボット</h3>
+            <p><strong>学習元:</strong> ③利用者マニュアル</p>
+            <p><strong>利用者:</strong> 全社員</p>
+            <p><strong>効果:</strong></p>
+            <ul>
+                <li>「freee勤怠の打刻方法は?」→ AIが24時間回答</li>
+                <li>「Proxy申請はどうやる?」→ 手順を即座に案内</li>
+                <li>問い合わせ件数削減、利用者の自己解決</li>
+            </ul>
+        </div>
+
+        <h2>💡 まとめ</h2>
+
+        <div class="condition-box">
+            <h3 style="margin-top: 0;">文書を4種類に分ける理由</h3>
+            <ol>
+                <li><strong>AIチャットボット実現のため</strong>
+                    <ul>
+                        <li>テキスト形式(①②③)でAI学習を可能に</li>
+                        <li>図解資料(④)で人間の理解を補助</li>
+                    </ul>
+                </li>
+                <li><strong>対象者別の適切な情報提供</strong>
+                    <ul>
+                        <li>システムG向け(①②)と利用者向け(③④)を分離</li>
+                    </ul>
+                </li>
+                <li><strong>段階的なAI導入</strong>
+                    <ul>
+                        <li>フェーズ2: システムG内テスト(①②)</li>
+                        <li>フェーズ4: 全社展開(③)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="ok-box" style="margin-top: 30px;">
+            <h3 style="margin-top: 0;">🎯 今やっていることの意味</h3>
+            <p>今、Notionで4種類の文書を分けて作っているのは、<br>
+            <strong>将来のAIチャットボット実現と段階的導入のため</strong>です。</p>
+            <p>この設計により、問い合わせゼロの自己解決型組織が実現します。</p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; margin-top: 50px;">
+            <h2 style="color: white; border: none; padding: 0; margin-top: 0;">🎯 次のステップ</h2>
+            <p>設計が理解できたら、次は実践を学びましょう:</p>
+            <a href="knowledge-vs-manual.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">ナレッジとマニュアルの違い(5分)</a>
+            <a href="faq.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">よくある質問</a>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>

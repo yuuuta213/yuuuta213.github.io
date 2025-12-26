@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ナレッジとマニュアルの違い | ナレッジマネジメントシステム</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 30px;
+        }
+        .question-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .answer-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        .compare-table th {
+            background: #edf2f7;
+            padding: 15px;
+            border: 1px solid #cbd5e0;
+            text-align: left;
+        }
+        .compare-table td {
+            padding: 15px;
+            border: 1px solid #cbd5e0;
+            vertical-align: top;
+        }
+        .doc-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .doc-label {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .knowledge-label {
+            background: #bee3f8;
+            color: #2c5282;
+        }
+        .manual-label {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        .example-box {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+        ul {
+            line-height: 2;
+        }
+        .breadcrumb {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .highlight {
+            background: #fef5e7;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #2d3748; color: white; padding: 15px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.1em;">ナレッジマネジメントシステム</div>
+            <div>
+                <a href="../index.html" style="color: white; margin-left: 20px; text-decoration: none;">トップ</a>
+                <a href="index.html" style="color: white; margin-left: 20px; text-decoration: none;">導入ガイド</a>
+                <a href="../handbook/index.html" style="color: white; margin-left: 20px; text-decoration: none;">ハンドブック</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">トップ</a> &gt; <a href="index.html">導入ガイド</a> &gt; ナレッジとマニュアルの違い
+        </div>
+
+        <h1>🔍 ナレッジとマニュアルの違い(5分)</h1>
+
+        <div class="question-box">
+            <h3 style="margin-top: 0;">❓ よくある疑問</h3>
+            <ul>
+                <li>「ナレッジで手順を書いたら、それってマニュアルでは?」</li>
+                <li>「最初からマニュアル作った方が早くない?」</li>
+                <li>「ナレッジとマニュアルって、結局何が違うの?」</li>
+            </ul>
+        </div>
+
+        <div class="answer-box">
+            <h3 style="margin-top: 0;">💡 答え: 目的と完成度が全く違う</h3>
+            <p><strong>①ナレッジ</strong>は「個人の頭の中の知識を外に出す」ための記録</p>
+            <p><strong>②マニュアル</strong>は「誰がやっても同じ結果を出す」ための基準</p>
+            <p>この2つは、<span class="highlight">役割も使い方も全く異なります</span>。</p>
+        </div>
+
+        <h2>📊 2つの違い - 概要</h2>
+
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">項目</th>
+                    <th>① ナレッジ</th>
+                    <th>② マニュアル</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>何?</strong></td>
+                    <td>調査・試行錯誤の<strong>記録</strong></td>
+                    <td>確定した<strong>標準手順</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>目的</strong></td>
+                    <td>
+                        • 個人の頭の中の知識を外に出す<br>
+                        • 次に同じことが起きたときの参考<br>
+                        • 調査過程・判断理由を残す
+                    </td>
+                    <td>
+                        • 誰がやっても同じ結果を出す<br>
+                        • 業務の標準化・品質担保<br>
+                        • 教育・引継ぎの基準
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>完成度</strong></td>
+                    <td>
+                        <strong>60%</strong><br>
+                        (書きかけOK)
+                    </td>
+                    <td>
+                        <strong>100%</strong><br>
+                        (常に最新・正確)
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>特徴</strong></td>
+                    <td>
+                        • 結論が出ていなくてもOK<br>
+                        • 試したことを列挙するだけでもOK<br>
+                        • 後から統合・整理される前提
+                    </td>
+                    <td>
+                        • 手順が確定している<br>
+                        • 判断基準が明確<br>
+                        • 定期レビュー・更新が前提
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>AI活用</strong></td>
+                    <td>
+                        • 多様な事例・パターンの学習元<br>
+                        • エラー対処のバリエーション提供
+                    </td>
+                    <td>
+                        • 確実な回答の提供元<br>
+                        • 標準的な手順の学習
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📝 具体例で理解する: freee勤怠ログインエラー</h2>
+
+        <p>同じ「freee勤怠のログインエラー」でも、<strong>①ナレッジと②マニュアルでは内容が全く異なります</strong>。</p>
+
+        <div class="doc-card">
+            <div class="doc-label knowledge-label">① ナレッジの例: 調査記録</div>
+            <h3>freee勤怠ログインエラーの対処調査</h3>
+            
+            <div class="example-box">【状況】
+Aさんから「freee勤怠にログインできない」と連絡
+
+【試したこと】
+1. パスワード再設定 → 解決せず
+2. ブラウザをChromeからEdgeに変更 → 解決せず
+3. ブラウザキャッシュクリア → ✅解決!
+
+【分かったこと】
+- freeeのログインエラーは、ブラウザキャッシュが原因の場合が多い
+- 特にChrome使用時に発生しやすい
+- キャッシュクリア後、再ログインで解決
+
+【次回への備忘】
+- まずブラウザキャッシュクリアを試す
+- それでもダメなら、パスワード再設定</div>
+
+            <p style="margin-top: 15px;"><strong>ポイント:</strong></p>
+            <ul>
+                <li>試行錯誤の<strong>過程</strong>が記録されている</li>
+                <li>結論に至るまでの<strong>判断理由</strong>が残っている</li>
+                <li>完璧でなくても、<strong>後で役立つ情報</strong>が蓄積されている</li>
+            </ul>
+        </div>
+
+        <div class="doc-card">
+            <div class="doc-label manual-label">② マニュアルの例: 対処手順</div>
+            <h3>freee勤怠ログインエラー対処手順</h3>
+            
+            <div class="example-box">【前提条件】
+- freee勤怠にログインできないとの問い合わせがあった場合
+
+【標準対処手順】
+1. ブラウザキャッシュクリアを依頼
+   - Chrome: Ctrl+Shift+Delete → 「キャッシュされた画像とファイル」をクリア
+   - Edge: Ctrl+Shift+Delete → 「キャッシュされたデータとファイル」をクリア
+
+2. 再ログインを依頼
+
+3. 解決しない場合
+   → パスワード再設定を案内
+   → freee管理画面から「パスワードリセット」実行
+
+【判断基準】
+- ブラウザキャッシュクリアで90%解決
+- 解決しない場合のみパスワード再設定
+
+【注意事項】
+- パスワード再設定は、ブラウザキャッシュクリア後に実施</div>
+
+            <p style="margin-top: 15px;"><strong>ポイント:</strong></p>
+            <ul>
+                <li><strong>手順が明確</strong>で、誰がやっても同じ対応ができる</li>
+                <li><strong>判断基準</strong>が具体的に書かれている</li>
+                <li><strong>注意事項</strong>が整理されている</li>
+            </ul>
+        </div>
+
+        <h2>🤔 なぜ両方必要なのか</h2>
+
+        <h3>❌ 全部マニュアルにすると...</h3>
+
+        <div class="question-box">
+            <p><strong>問題点:</strong></p>
+            <ol>
+                <li><strong>管理コストが爆発する</strong>
+                    <ul>
+                        <li>すべてを100%の完成度にするのは不可能</li>
+                        <li>定期レビュー・更新が追いつかない</li>
+                    </ul>
+                </li>
+                <li><strong>試行錯誤の過程が消える</strong>
+                    <ul>
+                        <li>「なぜその手順なのか」が分からない</li>
+                        <li>判断理由が残らない</li>
+                    </ul>
+                </li>
+                <li><strong>知識の蓄積が進まない</strong>
+                    <ul>
+                        <li>「マニュアルにできる完璧なもの」しか残らない</li>
+                        <li>60%の知識が捨てられる</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h3>✅ ナレッジ→マニュアルの流れのメリット</h3>
+
+        <div class="answer-box">
+            <p><strong>メリット:</strong></p>
+            <ol>
+                <li><strong>知識を捨てない</strong>
+                    <ul>
+                        <li>まずナレッジで記録(60%でOK)</li>
+                        <li>必要に応じてマニュアルに昇格(100%)</li>
+                    </ul>
+                </li>
+                <li><strong>段階的に成熟させる</strong>
+                    <ul>
+                        <li>ナレッジで試行錯誤を記録</li>
+                        <li>手順が確定したらマニュアル化</li>
+                    </ul>
+                </li>
+                <li><strong>AI活用で両方が活きる</strong>
+                    <ul>
+                        <li>マニュアル: 確実な回答</li>
+                        <li>ナレッジ: 多様な事例</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h2>🤖 AI活用での効果</h2>
+
+        <div class="info-box">
+            <h3 style="margin-top: 0;">AIチャットボットにおける役割分担</h3>
+            <p><strong>②マニュアル → 確実性</strong></p>
+            <ul>
+                <li>「新入社員アカウント作成手順は?」→ マニュアルから正確な手順を回答</li>
+                <li>「PC故障時の対応フローは?」→ マニュアルの判断基準を提示</li>
+            </ul>
+            
+            <p><strong>①ナレッジ → 豊富さ</strong></p>
+            <ul>
+                <li>「freeeログインエラーの対処法は?」→ 複数の事例から最適な方法を提案</li>
+                <li>「プロキシ設定がうまくいかない」→ 過去の試行錯誤から対処法を提示</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><strong>両方を学習させることで:</strong></p>
+            <ul>
+                <li>確実な回答(マニュアル)+ 豊富なバリエーション(ナレッジ)</li>
+                <li>より精度の高いAIチャットボットが実現</li>
+            </ul>
+        </div>
+
+        <h2>📌 判断基準</h2>
+
+        <h3>ナレッジにするべきもの</h3>
+        <ul>
+            <li>調査・検証の過程を残したい</li>
+            <li>試行錯誤の記録</li>
+            <li>エラー対処の複数パターン</li>
+            <li>判断に迷ったポイントと結論</li>
+            <li><strong>手順が確定していない</strong></li>
+        </ul>
+
+        <h3>マニュアルにするべきもの</h3>
+        <ul>
+            <li>定常的に発生する業務</li>
+            <li>複数人で対応する必要がある</li>
+            <li>判断のブレが業務品質に影響する</li>
+            <li><strong>手順が確定している</strong></li>
+            <li><strong>誰がやっても同じ結果が必要</strong></li>
+        </ul>
+
+        <div class="answer-box" style="margin-top: 30px;">
+            <h3 style="margin-top: 0;">🎯 迷ったら → まずナレッジ</h3>
+            <p>判断に迷ったら、<strong>まず①ナレッジとして記録</strong>してください。</p>
+            <p>後から②マニュアルに昇格させることは簡単ですが、<br>
+            記録しなかったら、その知識は<strong>永遠に失われます</strong>。</p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; margin-top: 50px;">
+            <h2 style="color: white; border: none; padding: 0; margin-top: 0;">🎯 次のステップ</h2>
+            <p>これで基本は習得できました。疑問が出たら:</p>
+            <a href="faq.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">よくある質問</a>
+            
+            <p style="margin-top: 20px;">より詳しく知りたい:</p>
+            <a href="../handbook/index.html" style="display: inline-block; padding: 12px 24px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 10px 10px 10px 0;">ハンドブック(辞書)</a>
+        </div>
+    </div>
+
+    <footer style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p>ナレッジマネジメントシステム説明サイト | システムG | 2024-2025</p>
+    </footer>
+</body>
+</html>
